@@ -16,35 +16,35 @@ export default function TestimonialsCarousel({ temoignages }: Props) {
     setIndex((prev) => (prev - 1 + temoignages.length) % temoignages.length);
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
       <div className="flex flex-col gap-4">
-        <p className="text-sm uppercase tracking-[0.4em] text-white/60">
+        <p className="text-sm uppercase tracking-[0.4em] text-slate-400">
           Témoignages
         </p>
-        <blockquote className="text-2xl font-semibold text-white">
+        <blockquote className="text-2xl font-semibold text-slate-900">
           “{current.citation}”
         </blockquote>
         <div>
-          <p className="text-lg font-semibold text-white">{current.nom}</p>
-          <p className="text-sm text-white/70">{current.promo}</p>
+          <p className="text-lg font-semibold text-slate-900">{current.nom}</p>
+          <p className="text-sm text-slate-500">{current.promo}</p>
         </div>
       </div>
-      <div className="mt-6 flex items-center gap-3 text-sm text-white/70">
+      <div className="mt-6 flex items-center gap-3 text-sm text-slate-500">
         <button
           type="button"
           onClick={prev}
-          className="rounded-full border border-white/20 px-3 py-1 transition hover:bg-white/10"
+          className="rounded-full border border-slate-200 px-3 py-1 transition hover:bg-slate-50"
         >
           ← Précédent
         </button>
         <button
           type="button"
           onClick={next}
-          className="rounded-full border border-white/20 px-3 py-1 transition hover:bg-white/10"
+          className="rounded-full border border-slate-200 px-3 py-1 transition hover:bg-slate-50"
         >
           Suivant →
         </button>
-        <span className="ml-auto text-xs tracking-[0.4em]">
+        <span className="ml-auto text-xs tracking-[0.4em] text-slate-400">
           {index + 1}/{temoignages.length}
         </span>
       </div>
